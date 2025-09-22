@@ -1,8 +1,9 @@
 package pacoteLanchonete;
 
 public class cardapio {
-    private String lanche,descricaoL, bebidas, decricaoB;
-    private double preçoL,preçoB;
+
+    private String lanche, descricaoL, bebidas, decricaoB;
+    private double preçoL, preçoB;
 
     public cardapio(String lanche, String descricaoL, String bebidas, String decricaoB, double preçoL, double preçoB) {
         this.lanche = lanche;
@@ -64,6 +65,5 @@ public class cardapio {
     public void setPreçoB(double preçoB) {
         this.preçoB = preçoB;
     }
-    
-    
+
 }
