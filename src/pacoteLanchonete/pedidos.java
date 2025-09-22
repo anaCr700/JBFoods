@@ -1,9 +1,9 @@
-
 package pacoteLanchonete;
 
 public class pedidos {
+
     private int quantidade;
-    private String observacoes,nome_recado,end_recado,recado,lancheEsp,formaPagamento,outro;
+    private String observacoes, nome_recado, end_recado, recado, lancheEsp, formaPagamento, outro;
     double valorTotal;
 
     public pedidos(int quantidade, String observacoes, String nome_recado, String end_recado, String recado, String lancheEsp, String formaPagamento, String outro, double valorTotal) {
@@ -92,6 +92,5 @@ public class pedidos {
     public void setValorTotal(double valorTotal) {
         this.valorTotal = valorTotal;
     }
-    
-    
+
 }
