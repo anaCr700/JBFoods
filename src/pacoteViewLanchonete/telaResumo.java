@@ -12,15 +12,15 @@ public class telaResumo extends javax.swing.JFrame {
       
     public telaResumo() {
         initComponents();
-        exibirC();
-        exibirP();
-        exibirEsp();
+        exibirCliente();
+        exibirPedido();
+        exibirPedidoEspecial();
     }
-       public void exibirC(){
-          pedidosDao pDao= new pedidosDao();
-           List<cliente> listaC= pDao.getExibirC();
-            DefaultTableModel m= (DefaultTableModel) tblCliente.getModel();
-             m.setNumRows(0);
+       public void exibirCliente(){
+          pedidosDao pedidosDao= new pedidosDao();
+           List<cliente> listaC= pedidosDao.getExibirC();
+            DefaultTableModel model= (DefaultTableModel) tblCliente.getModel();
+             model.setNumRows(0);
            
                 for(cliente c: listaC){
                   Object[] obj= new Object []{
@@ -30,7 +30,7 @@ public class telaResumo extends javax.swing.JFrame {
                     c.getEndereco()};
                        m.addRow(obj);}}
        
-       public void exibirP(){
+       public void exibirPedido(){
           pedidosDao pDao= new pedidosDao();
            List<pedidos> listaP= pDao.getExibirP();
             DefaultTableModel m= (DefaultTableModel) tblPedido.getModel();
@@ -45,7 +45,7 @@ public class telaResumo extends javax.swing.JFrame {
                   
                        m.addRow(obj);}}
            
-       public void exibirEsp(){
+       public void exibirPedidoEspecial(){
           pedidosDao pDao= new pedidosDao();
            List<pedidos> listaEP= pDao.getExibirEsp();
             DefaultTableModel m= (DefaultTableModel) tblEntregaEsp.getModel();
