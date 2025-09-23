@@ -1,7 +1,7 @@
 package pacoteLanchonete;
 
 public class pedidos {
-
+    private cliente cliente;
     private int quantidade;
     private String observacoes, nome_recado, end_recado, recado, lancheEsp, formaPagamento, outro;
     double valorTotal;
